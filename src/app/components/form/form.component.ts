@@ -1,5 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { fibonacci, triangular, nthPrimo } from '../../shared/utils/series';
 
 @Component({
   selector: 'app-form',
@@ -27,7 +28,10 @@ export class FormComponent {
   calculate() {
     if(this.numberNFormControl.value) {
       this.valueN.emit(this.numberNFormControl.value);
-      this.valueResponse.emit("Valor Calculado");
+      const n = parseInt(this.numberNFormControl.value);
+      const result = ( (3*fibonacci(n)) - (3*triangular(n-1)) ) / ( (n - 10)*nthPrimo(n+2) );
+
+      this.valueResponse.emit(result.toString());
     } else {
       this.valueN.emit("");
       this.valueResponse.emit("");

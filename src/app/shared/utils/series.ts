@@ -1,5 +1,5 @@
 //* FUNCION QUE RETORNA EL DIGITO N DE LA SERIE FIBONACCI
-function fibonacci(n: number) {
+export function fibonacci(n: number) {
     let a = 0;
     let b = 1;
     let temp;
@@ -18,14 +18,14 @@ function fibonacci(n: number) {
 
 
 //* FUNCION QUE RETORNA EL DIGITO N DE LOS NUMEROS TRIANGULARES
-function triangular(n: number) {
+export function triangular(n: number) {
     if (n <= 0) return 0;
     return (n * (n + 1)) / 2;
 }
 
 
 //* FUNCION QUE RETORNA EL DIGITO N DE LOS NUMEROS PRIMOS
-function nthPrimo(n) {
+export function nthPrimo(n) {
     if (n === 1) return 2; // El primer número primo es 2
     let count = 1;
     let numero = 3; // Comenzamos desde el segundo número primo, que es 3
