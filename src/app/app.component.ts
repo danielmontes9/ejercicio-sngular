@@ -12,7 +12,7 @@ import { LoaderComponent } from './shared/components/loader/loader.component';
 })
 export class AppComponent {
   title = 'ejercicio-sngular';
-  numberNFormControl = new FormControl('', [Validators.required]);
+  numberNFormControl = new FormControl(null, [Validators.required]);
   flagLoader: boolean = false;
 
   ngOnInit() {
@@ -26,5 +26,4 @@ export class AppComponent {
       setTimeout(() => this.flagLoader = false, 1000);
     })
   }
-
 }

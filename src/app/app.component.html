@@ -8,18 +8,18 @@
 
   <table class="math">
     <tr>
-        <td rowspan="3">serie<sub>( {{ numberNFormControl.value == "" ? "n" : numberNFormControl.value }} )</sub> =</td>
+        <td rowspan="3">serie<sub>( {{ numberNFormControl.value == null ? "n" : numberNFormControl.value }} )</sub> =</td>
         <td>
-          3fibonacci<sub>({{ numberNFormControl.value == "" ? "n" : numberNFormControl.value }})</sub> 
+          3fibonacci<sub>({{ numberNFormControl.value == null ? "n" : numberNFormControl.value }})</sub> 
           - 
-          3triangular<sub>({{ numberNFormControl.value == "" ? "n" : numberNFormControl.value }} - 1)</sub></td>
+          3triangular<sub>({{ numberNFormControl.value == null ? "n" : numberNFormControl.value }} - 1)</sub></td>
         <td rowspan="3"> = X </td>
     </tr>
 
     <tr>
         <td class="divider">
-          ({{ numberNFormControl.value == "" ? "n" : numberNFormControl.value }} - 10)
-          primo<sub>({{ numberNFormControl.value == "" ? "n" : numberNFormControl.value }} + 2)</sub>
+          ({{ numberNFormControl.value == null ? "n" : numberNFormControl.value }} - 10)
+          primo<sub>({{ numberNFormControl.value == null ? "n" : numberNFormControl.value }} + 2)</sub>
         </td>
     </tr>
   </table>
