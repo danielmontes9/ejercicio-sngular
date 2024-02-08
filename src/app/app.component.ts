@@ -13,9 +13,18 @@ import { LoaderComponent } from './shared/components/loader/loader.component';
 export class AppComponent {
   title = 'ejercicio-sngular';
   numberNFormControl = new FormControl('', [Validators.required]);
+  flagLoader: boolean = false;
 
   ngOnInit() {
     console.log(this.numberNFormControl)
+    this.activeLoader();
+  }
+
+  activeLoader() {
+    this.numberNFormControl.valueChanges.subscribe(value => {
+      this.flagLoader = true;
+      setTimeout(() => this.flagLoader = false, 1000);
+    })
   }
 
 }

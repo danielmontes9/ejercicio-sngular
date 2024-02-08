@@ -2,8 +2,7 @@
 
   <form>
     <mat-form-field>
-      <mat-label>N</mat-label>
-      <input type="email" matInput [formControl]="numberNFormControl">
+      <input type="number" matInput [formControl]="numberNFormControl" placeholder="Ingresa el valor n">
     </mat-form-field>
   </form>
 
@@ -25,6 +24,7 @@
     </tr>
   </table>
 
-
-  <app-loader></app-loader>
+  @if(flagLoader){ 
+    <app-loader></app-loader>
+  } 
 </section>
