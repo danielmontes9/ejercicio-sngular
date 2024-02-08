@@ -1,0 +1,19 @@
+<table class="math">
+    <tr>
+        <td rowspan="3">serie<sub>( {{ numberN == "" ? "n" : numberN }} )</sub> =</td>
+        <td>
+            3fibonacci<sub>({{ numberN == "" ? "n" : numberN }})</sub> 
+            - 
+            3triangular<sub>({{ numberN == "" ? "n" : numberN }} - 1)</sub></td>
+        <td rowspan="3"> 
+            = {{ result == "" ? 'X' : result }} 
+        </td>
+    </tr>
+
+    <tr>
+        <td class="divider">
+            ({{ numberN == "" ? "n" : numberN }} - 10)
+            primo<sub>({{ numberN == "" ? "n" : numberN }} + 2)</sub>
+        </td>
+    </tr>
+</table>
