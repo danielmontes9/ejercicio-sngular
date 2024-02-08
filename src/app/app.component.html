@@ -1,17 +1,28 @@
 <section>
 
   <form>
-    <input type="number">
+    <mat-form-field>
+      <mat-label>N</mat-label>
+      <input type="email" matInput [formControl]="numberNFormControl">
+    </mat-form-field>
   </form>
 
   <table class="math">
     <tr>
-        <td rowspan="3">serie<sub>(n)</sub> =</td>
-        <td>3fibonacci<sub>(n)</sub> - 3triangular<sub>(n - 1)</sub></td>
+        <td rowspan="3">serie<sub>( {{ numberNFormControl.value == "" ? "n" : numberNFormControl.value }} )</sub> =</td>
+        <td>
+          3fibonacci<sub>({{ numberNFormControl.value == "" ? "n" : numberNFormControl.value }})</sub> 
+          - 
+          3triangular<sub>({{ numberNFormControl.value == "" ? "n" : numberNFormControl.value }} - 1)</sub></td>
         <td rowspan="3"> = X </td>
     </tr>
 
-    <tr><td class="divider">(n - 10)primo<sub>(n + 2)</sub></td></tr>
+    <tr>
+        <td class="divider">
+          ({{ numberNFormControl.value == "" ? "n" : numberNFormControl.value }} - 10)
+          primo<sub>({{ numberNFormControl.value == "" ? "n" : numberNFormControl.value }} + 2)</sub>
+        </td>
+    </tr>
   </table>
 
 </section>
